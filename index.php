@@ -16,6 +16,6 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <a href="revision">Revisi&oacute;n sesi&oacute;n</a>
+        <a href="revision.php">Revisi&oacute;n sesi&oacute;n</a>
     </body>
 </html>

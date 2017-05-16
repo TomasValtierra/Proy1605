@@ -6,8 +6,10 @@ include $path.'usuario.php';
 
 $oUsr= new usuario();
 
-$oUsr->nombre='nuevo';
-if($oUsr->VerificaUsuario())
+$oUsr->nombre='flopez';
+$oUsr->clave='1234';
+
+if($oUsr->VerificaUsuario() && $oUsr->VerificaUsuarioClave())
     echo 'Existe';
 else 
     echo 'no Existe';
