@@ -7,10 +7,9 @@ class usuario{
     var $clave;
     
     
-    function verificaUsuario(){
+    function VerificaUsuario(){
         $oConn = new Conexion();
         if($oConn->conectar())
-        
         $db=$oConn->objconn;
         else
             return false;
@@ -19,7 +18,7 @@ class usuario{
         
         $resultado = $db->query($sql);
         
-        if($resultado->num_rows)
+        if($resultado->num_rows>=1)
             return true;
         else 
             return false;
