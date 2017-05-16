@@ -8,6 +8,22 @@ class usuario{
     
     
     function verificaUsuario(){
+        $oConn = new Conexion();
+        if($oConn->conectar())
+        
+        $db=$oConn->objconn;
+        else
+            return false;
+        
+        $sql="SELECT * FROM acceso WHERE nomusuario='$this->nombre'";
+        
+        $resultado = $db->query($sql);
+        
+        if($resultado->num_rows)
+            return true;
+        else 
+            return false;
+        
         
     }
 }
